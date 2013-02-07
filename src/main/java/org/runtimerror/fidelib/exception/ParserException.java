@@ -7,6 +7,7 @@ package org.runtimerror.fidelib.exception;
  * @author Ess Laptop
  *
  */
+@SuppressWarnings("serial")
 public class ParserException extends RuntimeException {
 
 	/**

@@ -3,7 +3,6 @@ package org.runtimerror.fidelib.impl;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.runtimerror.fidelib.AbstractFileSection;
 import org.runtimerror.fidelib.FileSection;
@@ -17,7 +16,6 @@ import org.runtimerror.fidelib.SectionDelimiter;
 
 public class BasicFileSection extends AbstractFileSection implements ParserEventSource {
 	
-	private Map<String, String> dataMap;
 	private List<ParserEventListener> listeners = new ArrayList<ParserEventListener>();
 	
 	public BasicFileSection() {

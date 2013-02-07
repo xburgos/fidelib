@@ -3,7 +3,6 @@ package org.runtimerror.fidelib;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +11,6 @@ public abstract class AbstractFileSection implements FileSection{
 
 	private static final Logger log = LoggerFactory.getLogger(AbstractFileSection.class);
 	
-	private Map<String, String> dataMap;
 	protected Integer linesRead = 1;
 	protected List<String> sectionData = new ArrayList<String>();
 	protected List<Object> parsedLines;

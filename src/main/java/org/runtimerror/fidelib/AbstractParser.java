@@ -10,8 +10,6 @@ import java.util.List;
 
 import org.runtimerror.fidelib.exception.ParserException;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
-
 public abstract class AbstractParser implements Parser {
 	
 	private FileDescriptor descriptor;
@@ -41,7 +39,7 @@ public abstract class AbstractParser implements Parser {
 	/* (non-Javadoc)
 	 * @see uk.co.ecube.parser.Parser#parse(uk.co.ecube.parser.FileDescriptor, java.lang.String)
 	 */
-	public ParseReport parse(FileDescriptor descriptor, String filePath) throws ParseException{
+	public ParseReport parse(FileDescriptor descriptor, String filePath) throws ParserException{
 		if(descriptor == null || filePath == null || filePath.trim().length() == 0) {
 			throw new InvalidParameterException("Neither descriptor or filePath may be null or empty.");
 		}
@@ -71,7 +69,7 @@ public abstract class AbstractParser implements Parser {
 	/* (non-Javadoc)
 	 * @see uk.co.ecube.parser.Parser#parse(java.lang.String)
 	 */
-	public ParseReport parse(String path) throws ParseException{
+	public ParseReport parse(String path) throws ParserException{
 		return parse(this.descriptor, path);
 	}
 	
