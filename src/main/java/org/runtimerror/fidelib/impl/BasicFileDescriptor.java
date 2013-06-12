@@ -3,7 +3,7 @@
  */
 package org.runtimerror.fidelib.impl;
 
-import org.runtimerror.fidelib.FileDescriptor;
+import org.runtimerror.fidelib.FileDescription;
 
 
 
@@ -11,7 +11,7 @@ import org.runtimerror.fidelib.FileDescriptor;
  * @author Ess Laptop
  *
  */
-public class BasicFileDescriptor extends FileDescriptor {
+public class BasicFileDescriptor extends FileDescription {
 	
 	public BasicFileDescriptor() {
 		setLineSeparator(DEFAULT_LINE_SEPARATOR);

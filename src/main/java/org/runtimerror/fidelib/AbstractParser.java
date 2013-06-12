@@ -12,7 +12,7 @@ import org.runtimerror.fidelib.exception.ParserException;
 
 public abstract class AbstractParser implements Parser {
 	
-	private FileDescriptor descriptor;
+	private FileDescription descriptor;
 	private String filePath;
 	private Integer linesRead;
 	private ParseReport report;
@@ -22,13 +22,14 @@ public abstract class AbstractParser implements Parser {
 		this.linesRead = 1; 
 		this.dataMap = new ArrayList<Object>();
 	}
-	public AbstractParser(FileDescriptor descriptor, ParseReport report) {
+	public AbstractParser(FileDescription descriptor, ParseReport report) {
 		this.dataMap = new ArrayList<Object>();
 		this.report = report;
 		this.linesRead = 1;
 		this.descriptor = descriptor;
 	}
-	public AbstractParser(FileDescriptor descriptor, String filePath, ParseReport report) {
+
+	public AbstractParser(FileDescription descriptor, String filePath, ParseReport report) {
 		this.dataMap = new ArrayList<Object>();
 		this.linesRead = 1;
 		this.descriptor = descriptor;
@@ -39,7 +40,7 @@ public abstract class AbstractParser implements Parser {
 	/* (non-Javadoc)
 	 * @see uk.co.ecube.parser.Parser#parse(uk.co.ecube.parser.FileDescriptor, java.lang.String)
 	 */
-	public ParseReport parse(FileDescriptor descriptor, String filePath) throws ParserException{
+	public ParseReport parse(FileDescription descriptor, String filePath) throws ParserException{
 		if(descriptor == null || filePath == null || filePath.trim().length() == 0) {
 			throw new InvalidParameterException("Neither descriptor or filePath may be null or empty.");
 		}

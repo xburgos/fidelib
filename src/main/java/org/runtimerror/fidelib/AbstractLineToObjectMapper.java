@@ -10,30 +10,18 @@ public abstract class AbstractLineToObjectMapper implements LineToObjectMapper{
 	protected Class<?> mappedType;
 	protected Map<Integer,String> propertiesMap;
 
-	/**
-	 * @return the mappedObject
-	 */
 	public Class<?> getMappedType() {
 		return mappedType;
 	}
 
-	/**
-	 * @param mappedObject the mappedObject to set
-	 */
 	public void setMappedType(Class<?> mappedType) {
 		this.mappedType = mappedType;
 	}
 
-	/**
-	 * @return the propertiesMap
-	 */
 	public Map<Integer, String> getPropertiesMap() {
 		return propertiesMap;
 	}
 
-	/**
-	 * @param propertiesMap the propertiesMap to set
-	 */
 	public void setPropertiesMap(Map<Integer, String> propertiesMap) {
 		this.propertiesMap = propertiesMap;
 	}
@@ -45,7 +33,7 @@ public abstract class AbstractLineToObjectMapper implements LineToObjectMapper{
 		for(int i = 0; i < columns.size(); i++) {
 			Object column = columns.get(i);
 			
-			String propertyName = getPropertiesMap().get(Integer.valueOf(i+1));
+			String propertyName = getPropertiesMap().get(i+1);
 			BeanUtils.setProperty(mappedObject, propertyName, column);
 		}
 		
