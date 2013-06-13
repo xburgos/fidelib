@@ -27,7 +27,15 @@
                 <configuration>
                     <providerSelection>2.0</providerSelection>
                     <sourceEncoding>UTF-8</sourceEncoding>
-                    <source></source>
+                    <source/>
+                    <sources>
+                        <fileset>
+                            <directory>${pom.basedir}/src/main/test</directory>
+                            <includes>
+                                <include>**/*.groovy</include>
+                            </includes>
+                        </fileset>
+                    </sources>
                 </configuration>
                 <executions>
                     <execution>
