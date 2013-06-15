@@ -7,7 +7,7 @@ import static org.runtimerror.fidelib.line.AbstractLineReader.DEFAULT_FIELD_SEPA
 
 
 @Unroll
-class BasicLineReaderTest extends Specification {
+class BasicLineReaderSpec extends Specification {
 
        def 'when I create a basic reader without a field separator the default is used'() {
 
