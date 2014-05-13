@@ -1,0 +1,7 @@
+*.idea
+*.class
+*.iml
+*.settings
+gradlew
+gradlew.bat
+gradle-wrapper.*
